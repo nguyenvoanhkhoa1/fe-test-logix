@@ -1,3 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  @apply font-bold text-[65px] leading-[70px];
+}
+h2 {
+  @apply font-bold text-[44px] leading-[50px];
+}
+h3 {
+  @apply font-bold text-[40px] leading-[45px];
+}
+h4 {
+  @apply font-semibold text-[33px] leading-[38px];
+}
+h5 {
+  @apply font-semibold text-[25px] leading-[30px];
+}
+.body-main {
+  @apply font-light text-[22px];
+}
+.body-main-regular {
+  @apply font-normal text-[22px];
+}
+.body-link {
+  @apply font-semibold text-base;
+}
+.body-small {
+  @apply font-light text-lg;
+}
+.button-text {
+  @apply font-semibold text-xl;
+}
+.subtitle-text {
+  @apply font-normal text-[22px];
+}
+.footer-text {
+  @apply font-normal text-sm;
+}
+.input-text {
+  @apply font-light text-base;
+}
