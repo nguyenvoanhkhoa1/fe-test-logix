@@ -3,7 +3,7 @@ import { createStore } from "./store";
 // const language = getLanguage();
 export const AppStore = createStore({
   // language: language ? language : 'vi',
-  // isAuthenticated: false,
+  isAuthenticated: false,
   notification: {
     isShow: false,
     type: "info",

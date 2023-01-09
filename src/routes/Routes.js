@@ -1,27 +1,47 @@
 import { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Navigate,
+} from "react-router-dom";
 import { BrandLoading } from "../components";
-import { EnrolNowView, WelcomeView } from "./views";
+import routeUrls from "../configs/route";
+import Main from "../layouts/Main";
+import { EnrolNowView, HomepageView, WelcomeView } from "./views";
 
-const Navigation = () => (
-  <nav>
-    <Link to="/welcome">Welcome</Link>
-    <Link to="/enrol-now">Enrol Now</Link>
-  </nav>
-);
+const ProtectedRoute = ({
+  user,
+  redirectPath = routeUrls.welcome.path,
+  children,
+}) => {
+  if (!user) {
+    return <Navigate to={redirectPath} replace />;
+  }
+
+  return children;
+};
 
 const AppRoutes = () => {
   return (
     <Router>
       <Suspense fallback={<BrandLoading />}>
-        <Navigation />
+        <Main>
+          <Routes>
+            <Route index element={<WelcomeView />} />
 
-        <Routes>
-          <Route index element={<WelcomeView />} />
-          <Route path="welcome" element={<WelcomeView />} />
-          <Route path="enrol-now" element={<EnrolNowView />} />
-          <Route path="*" element={<p>There's nothing here: 404!</p>} />
-        </Routes>
+            <Route path={routeUrls.welcome.path} element={<WelcomeView />} />
+            <Route path={routeUrls.enrolNow.path} element={<EnrolNowView />} />
+
+            <Route path={routeUrls.homePage.path} element={<HomepageView />} />
+
+            <Route
+              path="*"
+              element={<Navigate to={routeUrls.welcome.path} replace />}
+            />
+          </Routes>
+        </Main>
       </Suspense>
     </Router>
   );
