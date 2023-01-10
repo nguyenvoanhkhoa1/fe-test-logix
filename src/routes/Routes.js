@@ -8,8 +8,15 @@ import {
 } from "react-router-dom";
 import { BrandLoading } from "../components";
 import routeUrls from "../configs/route";
+import ScrollToTop from "../helpers/ScrollToTop";
 import Main from "../layouts/Main";
-import { EnrolNowView, HomepageView, WelcomeView } from "./views";
+import {
+  EnrolNowView,
+  HomepageView,
+  PrivacyPolicyView,
+  TermsAndConditionsView,
+  WelcomeView,
+} from "./views";
 
 const ProtectedRoute = ({
   user,
@@ -28,8 +35,18 @@ const AppRoutes = () => {
     <Router>
       <Suspense fallback={<BrandLoading />}>
         <Main>
+          <ScrollToTop />
           <Routes>
             <Route index element={<WelcomeView />} />
+
+            <Route
+              path={routeUrls.privacyPolicy.path}
+              element={<PrivacyPolicyView />}
+            />
+            <Route
+              path={routeUrls.termsAndConditions.path}
+              element={<TermsAndConditionsView />}
+            />
 
             <Route path={routeUrls.welcome.path} element={<WelcomeView />} />
             <Route path={routeUrls.enrolNow.path} element={<EnrolNowView />} />

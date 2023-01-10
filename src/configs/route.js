@@ -1,4 +1,12 @@
 const routeUrls = {
+  privacyPolicy: {
+    path: "privacy-policy",
+    title: "Privacy-policy",
+  },
+  termsAndConditions: {
+    path: "terms-and-conditions",
+    title: "Terms and Conditions",
+  },
   welcome: {
     path: "welcome",
     title: "Welcome",

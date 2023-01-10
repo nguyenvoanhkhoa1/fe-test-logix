@@ -45,7 +45,7 @@ h5 {
   @apply font-normal text-sm;
 }
 .input-text {
-  @apply font-light text-base;
+  @apply font-light text-base leading-[22px];
 }
 .section-container {
   @apply container mx-auto px-4 sm:px-6 xl:px-0 xl:max-w-6xl;

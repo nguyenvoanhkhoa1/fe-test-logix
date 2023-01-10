@@ -41,6 +41,7 @@ module.exports = {
         border_line: "#41B6E6",
         subtitle_text: "#212529",
         logo: "#E45858",
+        subheader: "#2E3B45",
       },
     },
   },

@@ -1,14 +1,17 @@
-import { Banner } from "../../components";
+import { Banner, BorderLine } from "../../components";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import routeUrls from "../../configs/route";
 
 const Welcome = () => {
+  let navigate = useNavigate();
   return (
     <>
       <Banner imgUrl="images/banners/welcome.png">
         <div className="flex flex-col text-white max-w-[509px]">
           <div>
             <h1 className="max-w-[331px]">Do MORE Get MORE</h1>
-            <div className="mt-5 w-[94px] h-[6px] bg-border_line"></div>
+            <BorderLine className="mt-5" color="border_line" />
           </div>
           <div className="mt-10 subtitle-text">
             <p>
@@ -22,13 +25,19 @@ const Welcome = () => {
             </p>
           </div>
           <div className="mt-[50px] flex gap-1">
-            <button className="w-[200px] h-[60px] flex justify-center items-center gap-1 border-2 border-solid border-border_line button-text text-white">
+            <button
+              className="w-[200px] h-[60px] flex justify-center items-center gap-1 border-2 border-solid border-border_line button-text text-white"
+              onClick={() => navigate(`/${routeUrls.enrolNow.path}`)}
+            >
               Enroll Now
-              <img src="icons/right-arrow.svg" alt="" />
+              <img src="icons/right-arrow-white.svg" alt="" />
             </button>
-            <button className="w-[180px] h-[60px] flex justify-center items-center gap-1 border-2 border-solid border-border_line button-text text-white">
+            <button
+              className="w-[180px] h-[60px] flex justify-center items-center gap-1 border-2 border-solid border-border_line button-text text-white"
+              onClick={() => navigate(`/${routeUrls.login.path}`)}
+            >
               Login
-              <img src="icons/right-arrow.svg" alt="" />
+              <img src="icons/right-arrow-white.svg" alt="" />
             </button>
           </div>
         </div>
