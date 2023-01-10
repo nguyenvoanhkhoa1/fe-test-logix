@@ -5,8 +5,10 @@ import {
   BorderLine,
   Input,
   QuestionMark,
+  RightArrow,
   Select,
 } from "../../components";
+import { COLOR_PALETTE } from "../../configs/constants";
 import routeUrls from "../../configs/route";
 
 const EnrolNow = () => {
@@ -16,14 +18,14 @@ const EnrolNow = () => {
       <Banner imgUrl="images/banners/common.png">
         <div className="text-white">
           <h1 className="max-w-[331px]">Do MORE Get MORE</h1>
-          <BorderLine className="mt-5" color="border_line" />
+          <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
         </div>
       </Banner>
       <section className="section-container my-20 grid grid-cols-12 gap-10">
         <div className="pb-10 col-span-6 text-subheader border-b-[1px] border-solid border-[#E3E2E2]">
           <div>
             <h1 className="text-[55px]">Step 1:</h1>
-            <BorderLine className="mt-5" color="main" />
+            <BorderLine className="mt-5" color={COLOR_PALETTE.main} />
           </div>
           <h4 className="mt-4 text-[35px]">SIGN UP & GET US$25!</h4>
           <div className="mt-[30px] px-5">
@@ -38,7 +40,7 @@ const EnrolNow = () => {
           <div>
             <div>
               <h3>CREATE A NEW ACCOUNT.</h3>
-              <BorderLine className="mt-5" color="small_card" />
+              <BorderLine className="mt-5" color={COLOR_PALETTE.smallCard} />
             </div>
             <p className="mt-8 text-xs italic font-light">
               To help the government fight the funding of terrorism and money
@@ -175,7 +177,7 @@ const EnrolNow = () => {
               onClick={() => navigate(`/${routeUrls.login.path}`)}
             >
               Back to Login
-              <img src="icons/right-arrow-blue.svg" alt="" />
+              <RightArrow color={COLOR_PALETTE.button} />
             </button>
           </div>
         </div>

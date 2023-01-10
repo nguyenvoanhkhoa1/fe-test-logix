@@ -13,6 +13,7 @@ import Main from "../layouts/Main";
 import {
   EnrolNowView,
   HomepageView,
+  LoginView,
   PrivacyPolicyView,
   TermsAndConditionsView,
   WelcomeView,
@@ -50,6 +51,7 @@ const AppRoutes = () => {
 
             <Route path={routeUrls.welcome.path} element={<WelcomeView />} />
             <Route path={routeUrls.enrolNow.path} element={<EnrolNowView />} />
+            <Route path={routeUrls.login.path} element={<LoginView />} />
 
             <Route element={<ProtectedRoute user={null} />}>
               <Route

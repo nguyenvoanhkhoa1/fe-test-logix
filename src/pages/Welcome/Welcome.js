@@ -1,7 +1,8 @@
-import { Banner, BorderLine } from "../../components";
+import { Banner, BorderLine, RightArrow } from "../../components";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import routeUrls from "../../configs/route";
+import { COLOR_PALETTE } from "../../configs/constants";
 
 const Welcome = () => {
   let navigate = useNavigate();
@@ -11,7 +12,7 @@ const Welcome = () => {
         <div className="flex flex-col text-white max-w-[509px]">
           <div>
             <h1 className="max-w-[331px]">Do MORE Get MORE</h1>
-            <BorderLine className="mt-5" color="border_line" />
+            <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
           </div>
           <div className="mt-10 subtitle-text">
             <p>
@@ -30,14 +31,14 @@ const Welcome = () => {
               onClick={() => navigate(`/${routeUrls.enrolNow.path}`)}
             >
               Enroll Now
-              <img src="icons/right-arrow-white.svg" alt="" />
+              <RightArrow color="white" />
             </button>
             <button
               className="w-[180px] h-[60px] flex justify-center items-center gap-1 border-2 border-solid border-border_line button-text text-white"
               onClick={() => navigate(`/${routeUrls.login.path}`)}
             >
               Login
-              <img src="icons/right-arrow-white.svg" alt="" />
+              <RightArrow color="white" />
             </button>
           </div>
         </div>

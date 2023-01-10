@@ -4,3 +4,4 @@ export { default as BorderLine } from "./BorderLine";
 export { default as Input } from "./Input";
 export { default as Select } from "./Select";
 export { default as QuestionMark } from "./QuestionMark";
+export { default as RightArrow } from "./RightArrow";
