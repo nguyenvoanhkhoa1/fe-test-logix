@@ -1,11 +1,20 @@
 import { Banner, BorderLine, Input, RightArrow } from "../../components";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import routeUrls from "../../configs/route";
 import { COLOR_PALETTE } from "../../configs/constants";
+import { useAppStore } from "../../stores";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   let navigate = useNavigate();
+  const [appStore, updateAppStore] = useAppStore();
+  const handleLogin = () => {
+    updateAppStore((draft) => {
+      draft.isAuthenticated = true;
+    });
+    console.log(appStore);
+    navigate(`/${routeUrls.homePage.path}`);
+  };
   return (
     <>
       <Banner imgUrl="images/banners/login.png">
@@ -30,7 +39,7 @@ const Login = () => {
           </div>
           <button
             className="mt-[50px] w-[180px] h-[60px] bg-border_line flex justify-center items-center gap-1 button-text"
-            onClick={() => {}}
+            onClick={handleLogin}
           >
             Log in
             <RightArrow color="white" />

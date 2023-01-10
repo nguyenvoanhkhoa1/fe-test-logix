@@ -10,6 +10,7 @@ import { BrandLoading } from "../components";
 import routeUrls from "../configs/route";
 import ScrollToTop from "../helpers/ScrollToTop";
 import Main from "../layouts/Main";
+import { useAppStore } from "../stores";
 import {
   EnrolNowView,
   HomepageView,
@@ -20,11 +21,11 @@ import {
 } from "./views";
 
 const ProtectedRoute = ({
-  user,
+  isAuthenticated,
   redirectPath = routeUrls.welcome.path,
   children,
 }) => {
-  if (!user) {
+  if (!isAuthenticated) {
     return <Navigate to={redirectPath} replace />;
   }
 
@@ -32,13 +33,19 @@ const ProtectedRoute = ({
 };
 
 const AppRoutes = () => {
+  const [appStore, updateAppStore] = useAppStore();
   return (
     <Router>
       <Suspense fallback={<BrandLoading />}>
         <Main>
           <ScrollToTop />
           <Routes>
-            <Route index element={<WelcomeView />} />
+            <Route
+              index
+              element={
+                !appStore.isAuthenticated ? <WelcomeView /> : <HomepageView />
+              }
+            />
 
             <Route
               path={routeUrls.privacyPolicy.path}
@@ -53,7 +60,11 @@ const AppRoutes = () => {
             <Route path={routeUrls.enrolNow.path} element={<EnrolNowView />} />
             <Route path={routeUrls.login.path} element={<LoginView />} />
 
-            <Route element={<ProtectedRoute user={null} />}>
+            <Route
+              element={
+                <ProtectedRoute isAuthenticated={appStore.isAuthenticated} />
+              }
+            >
               <Route
                 path={routeUrls.homePage.path}
                 element={<HomepageView />}
@@ -62,7 +73,16 @@ const AppRoutes = () => {
 
             <Route
               path="*"
-              element={<Navigate to={routeUrls.welcome.path} replace />}
+              element={
+                <Navigate
+                  to={
+                    !appStore.isAuthenticated
+                      ? routeUrls.welcome.path
+                      : routeUrls.homePage.path
+                  }
+                  replace
+                />
+              }
             />
           </Routes>
         </Main>

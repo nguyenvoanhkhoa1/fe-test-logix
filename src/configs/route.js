@@ -8,7 +8,7 @@ const routeUrls = {
     title: "Terms and Conditions",
   },
   welcome: {
-    path: "welcome",
+    path: "",
     title: "Welcome",
   },
   enrolNow: {
@@ -23,12 +23,16 @@ const routeUrls = {
     path: "login",
     title: "Login",
   },
+  account: {
+    path: "account",
+    title: "Account",
+  },
   contact: {
     path: "contact",
     title: "Contact",
   },
   homePage: {
-    path: "homepage",
+    path: "",
     title: "Homepage",
   },
 };
