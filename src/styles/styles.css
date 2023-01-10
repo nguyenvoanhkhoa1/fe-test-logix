@@ -47,3 +47,6 @@ h5 {
 .input-text {
   @apply font-light text-base;
 }
+.section-container {
+  @apply container mx-auto px-4 sm:px-6 xl:px-0 xl:max-w-6xl;
+}

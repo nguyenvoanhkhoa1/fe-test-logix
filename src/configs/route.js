@@ -7,9 +7,17 @@ const routeUrls = {
     path: "enrol-now",
     title: "Enrol Now",
   },
+  register: {
+    path: "enrol-now",
+    title: "Register",
+  },
   login: {
     path: "login",
     title: "Login",
+  },
+  contact: {
+    path: "contact",
+    title: "Contact",
   },
   homePage: {
     path: "homepage",

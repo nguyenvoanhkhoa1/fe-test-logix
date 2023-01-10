@@ -8,11 +8,9 @@ const Main = (props) => {
   const [appStore, updateAppStore] = useAppStore();
 
   return (
-    <div>
+    <div className="min-h-screen">
       <Header />
-      <main className="container mx-auto px-4 sm:px-6 xl:px-0 lg:max-w-5xl">
-        {children}
-      </main>
+      <main>{children}</main>
       <Footer />
     </div>
   );

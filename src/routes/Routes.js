@@ -34,7 +34,12 @@ const AppRoutes = () => {
             <Route path={routeUrls.welcome.path} element={<WelcomeView />} />
             <Route path={routeUrls.enrolNow.path} element={<EnrolNowView />} />
 
-            <Route path={routeUrls.homePage.path} element={<HomepageView />} />
+            <Route element={<ProtectedRoute user={null} />}>
+              <Route
+                path={routeUrls.homePage.path}
+                element={<HomepageView />}
+              />
+            </Route>
 
             <Route
               path="*"

@@ -5,11 +5,9 @@ import { AppStore } from "../stores";
 
 const App = () => {
   return (
-    <div>
-      <AppStore.Provider>
-        <Routes />
-      </AppStore.Provider>
-    </div>
+    <AppStore.Provider>
+      <Routes />
+    </AppStore.Provider>
   );
 };
 
