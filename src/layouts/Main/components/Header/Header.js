@@ -11,7 +11,7 @@ const Header = () => {
     });
   };
   return (
-    <header className="fixed bg-main w-full z-40">
+    <header className="fixed bg-main w-full z-40 shadow-2xl">
       <div className="section-container h-[70px] flex items-center justify-between">
         <Link to="/">
           <img
