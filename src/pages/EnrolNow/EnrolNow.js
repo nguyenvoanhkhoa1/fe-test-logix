@@ -24,28 +24,35 @@ const EnrolNow = () => {
           <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
         </div>
       </Banner>
-      <section className="section-container my-20 grid grid-cols-12 gap-10">
-        <div className="pb-10 col-span-6 text-subheader border-b-[1px] border-solid border-[#E3E2E2]">
+      <section className="section-container my-20 grid grid-cols-6 lg:grid-cols-12 gap-10">
+        <div className="col-span-6 text-subheader text-center lg:text-left">
           <div>
-            <h1 className="text-[55px]">Step 1:</h1>
-            <BorderLine className="mt-5" color={COLOR_PALETTE.main} />
+            <h1 className="md:text-[55px]">Step 1:</h1>
+            <BorderLine
+              className="mt-5 mx-auto lg:mx-0"
+              color={COLOR_PALETTE.main}
+            />
           </div>
-          <h4 className="mt-4 text-[35px]">SIGN UP & GET US$25!</h4>
-          <div className="mt-[30px] px-5">
+          <h4 className="mt-4 lg:text-[35px]">SIGN UP & GET US$25!</h4>
+          <div className="mt-[30px] sm:px-5">
             <div className="text-xs font-bold">Notes & Eligibility:</div>
             <p className="text-xs font-light">
               Sign-up Registration Period is from February 10th, 2022 through
               March 31, 2022. (Expires March 31, 2022)
             </p>
           </div>
+          <hr className="mt-10" />
         </div>
-        <div className=" col-span-6 text-subheader">
+        <div className="col-span-6 text-subheader text-center lg:text-left">
           <div>
             <div>
               <h3>CREATE A NEW ACCOUNT.</h3>
-              <BorderLine className="mt-5" color={COLOR_PALETTE.smallCard} />
+              <BorderLine
+                className="mt-5 mx-auto lg:mx-0"
+                color={COLOR_PALETTE.smallCard}
+              />
             </div>
-            <p className="mt-8 text-xs italic font-light">
+            <p className="mt-8 text-xs leading-6 italic font-light">
               To help the government fight the funding of terrorism and money
               laundering activities, federal law requires all financial
               institutions to obtain, verify, and record information that
@@ -59,7 +66,7 @@ const EnrolNow = () => {
           <div className="mt-10">
             <div>
               <h4 className=" font-normal">ACCOUNT DETAILS</h4>
-              <div className="flex gap-[30px]">
+              <div className="lg:flex gap-[30px]">
                 <Input placeholder="First Name" />
                 <Input placeholder="Last Name" />
               </div>
@@ -118,20 +125,28 @@ const EnrolNow = () => {
               <h4 className=" font-normal">SITE ACCESS AND AGREEMENTS</h4>
               <Input placeholder="Password" type="password" />
               <Input placeholder="Confirm password" type="password" />
-              <div className="mt-5 font-light text-sm text-subheader">
+              <div className="mt-5 font-light text-sm text-subheader text-left">
                 <div className="flex items-start">
-                  <input className="w-5 h-5 shrink-0" type="checkbox"></input>
-                  <p className="ml-3">
+                  <input
+                    id="st-check"
+                    className="w-5 h-5 shrink-0"
+                    type="checkbox"
+                  ></input>
+                  <label for="st-check" className="ml-3">
                     I agree to opt-in for program communications
-                  </p>
+                  </label>
                   <QuestionMark
                     className="ml-4"
                     title="I agree to opt-in for program communications"
                   />
                 </div>
                 <div className="mt-4 flex items-start">
-                  <input className="w-5 h-5 shrink-0" type="checkbox"></input>
-                  <p className="ml-3">
+                  <input
+                    id="nd-check"
+                    className="w-5 h-5 shrink-0"
+                    type="checkbox"
+                  ></input>
+                  <label for="nd-check" className="ml-3">
                     I Opt-In to this joint rewards program and I have read and
                     agree to the{" "}
                     <span
@@ -142,15 +157,19 @@ const EnrolNow = () => {
                     >
                       Terms & Conditions
                     </span>
-                  </p>
+                  </label>
                   <QuestionMark
                     className="ml-4"
                     title="I Opt-In to this joint rewards program and I have read and agree to the Terms & Conditions"
                   />
                 </div>
                 <div className="mt-4 flex items-start">
-                  <input className="w-5 h-5 shrink-0" type="checkbox"></input>
-                  <p className="ml-3">
+                  <input
+                    id="rd-check"
+                    className="w-5 h-5 shrink-0"
+                    type="checkbox"
+                  ></input>
+                  <label for="rd-check" className="ml-3">
                     I acknowledge I have read the{" "}
                     <span
                       className="text-[#3A66D8] underline cursor-pointer"
@@ -160,7 +179,7 @@ const EnrolNow = () => {
                     >
                       Dataminr Privacy Policy
                     </span>
-                  </p>
+                  </label>
                   <QuestionMark
                     className="ml-4"
                     title="I acknowledge I have read the Dataminr Privacy Policy "
