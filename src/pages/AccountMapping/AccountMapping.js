@@ -28,9 +28,9 @@ const AccountMapping = () => {
           <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
         </div>
       </Banner>
-      <section className="section-container mt-14 pb-20 border-b-[1px] border-solid border-[#E3E2E2]">
-        <div className="grid grid-cols-12 gap-8">
-          <div className=" col-span-4">
+      <section className="section-container mt-14">
+        <div className="flex flex-col-reverse md:grid grid-cols-12 gap-8">
+          <div className="col-span-4">
             <RewardCard
               href={REWARD_CARDS.accountMapping.href}
               title={REWARD_CARDS.accountMapping.title}
@@ -45,10 +45,13 @@ const AccountMapping = () => {
               </p>
             </div>
           </div>
-          <div className="col-span-8 flex flex-col gap-[30px] ">
+          <div className="col-span-8 flex flex-col gap-[30px] text-center md:text-left">
             <div>
               <h2>Submit your Targeted accounts</h2>
-              <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
+              <BorderLine
+                className="mt-5 mx-auto md:mx-0"
+                color={COLOR_PALETTE.borderLine}
+              />
             </div>
             <p className="body-small">
               We offer sales certifications to help you identify sales
@@ -74,8 +77,9 @@ const AccountMapping = () => {
             </div>
           </div>
         </div>
+        <hr className="mt-20" />
       </section>
-      <section className="section-container mt-12 mb-36">
+      <section className="section-container mt-12 mb-36 text-center md:text-left">
         <div className=" max-w-xl">
           <div>
             <h4>Targeted accounts</h4>
@@ -118,7 +122,7 @@ const AccountMapping = () => {
             <Input placeholder="Date of Mapping Meeting" type="date" />
           </div>
           <button
-            className="mt-14 h-[60px] w-[170px] bg-main flex justify-center items-center button-text text-white"
+            className="mt-14 h-[60px] w-full md:w-[170px] bg-main flex justify-center items-center button-text text-white"
             onClick={() => navigate(`/${routeUrls.homePage.path}`)}
           >
             Submit

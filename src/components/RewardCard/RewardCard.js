@@ -14,8 +14,10 @@ const RewardCard = ({ className, href, title, reward, color, ...rest }) => {
         }}
       />
       <div className="absolute inset-0 box-border w-full h-full flex flex-col justify-center items-center text-white">
-        <span className=" text-[40px] font-bold">{reward}</span>
-        <span className="mt-[10px] text-2xl font-semibold">{title}</span>
+        <span className=" text-[40px] font-bold text-center">{reward}</span>
+        <span className="mt-[10px] text-2xl font-semibold text-center">
+          {title}
+        </span>
       </div>
     </Link>
   );

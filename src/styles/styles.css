@@ -12,7 +12,7 @@ h1 {
   @apply font-bold text-4xl sm:text-5xl md:text-6xl lg:text-[65px] leading-tight uppercase;
 }
 h2 {
-  @apply font-bold text-[44px] leading-[50px] uppercase;
+  @apply font-bold text-3xl sm:text-4xl md:text-[44px] leading-tight uppercase;
 }
 h3 {
   @apply font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-[45px];

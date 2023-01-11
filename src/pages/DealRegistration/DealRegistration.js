@@ -20,9 +20,9 @@ const DealRegistration = () => {
           <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
         </div>
       </Banner>
-      <section className="section-container mt-14 pb-20 border-b-[1px] border-solid border-[#E3E2E2]">
-        <div className="grid grid-cols-12 gap-8">
-          <div className=" col-span-4">
+      <section className="section-container mt-14">
+        <div className="flex flex-col-reverse md:grid grid-cols-12 gap-8">
+          <div className="col-span-4">
             <RewardCard
               href={REWARD_CARDS.dealRegistration.href}
               title={REWARD_CARDS.dealRegistration.title}
@@ -37,10 +37,13 @@ const DealRegistration = () => {
               </p>
             </div>
           </div>
-          <div className="col-span-8 flex flex-col gap-[30px]">
+          <div className="col-span-8 flex flex-col gap-[30px] text-center md:text-left">
             <div>
               <h2>REGISTER A DEAL WITH THE DATMINR TEAM</h2>
-              <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
+              <BorderLine
+                className="mt-5 mx-auto md:mx-0"
+                color={COLOR_PALETTE.borderLine}
+              />
             </div>
             <div className="body-small">
               <p className="mt-[10px]">
@@ -88,8 +91,9 @@ const DealRegistration = () => {
             </div>
           </div>
         </div>
+        <hr className="mt-20" />
       </section>
-      <section className="section-container mt-12 mb-36">
+      <section className="section-container mt-12 mb-36 text-center md:text-left">
         <div className=" mt-16">
           <h4>DEAL REGISTRATION NUMBER</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
@@ -97,7 +101,7 @@ const DealRegistration = () => {
           </div>
         </div>
         <button
-          className="mt-10 h-[60px] w-[170px] bg-main flex justify-center items-center button-text text-white"
+          className="mt-10 h-[60px] w-full md:w-[170px] bg-main flex justify-center items-center button-text text-white"
           onClick={() => navigate(`/${routeUrls.homePage.path}`)}
         >
           Submit

@@ -52,7 +52,7 @@ const Select = ({
       </button>
       <ul
         ref={ref}
-        className={`${
+        className={`z-10 ${
           open ? " opacity-100" : "opacity-0 pointer-events-none"
         } absolute w-full bg-white rounded-[5px] py-5 shadow-[0px_0px_5px_black] transition-all duration-300`}
       >

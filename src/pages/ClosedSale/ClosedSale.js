@@ -22,9 +22,9 @@ const ClosedSale = () => {
           <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
         </div>
       </Banner>
-      <section className="section-container mt-14 pb-20 border-b-[1px] border-solid border-[#E3E2E2]">
-        <div className="grid grid-cols-12 gap-8">
-          <div className=" col-span-4">
+      <section className="section-container mt-14">
+        <div className="flex flex-col-reverse md:grid grid-cols-12 gap-8">
+          <div className="col-span-4">
             <RewardCard
               href={REWARD_CARDS.closedSale.href}
               title={REWARD_CARDS.closedSale.title}
@@ -39,11 +39,14 @@ const ClosedSale = () => {
               </p>
             </div>
           </div>
-          <div className="col-span-8 flex flex-col">
+          <div className="col-span-8 flex flex-col gap-[30px] text-center md:text-left">
             <div>
               <div>
                 <h2 className=" max-w-lg">CLOSE A NEW LOGO DATMINR DEAL.</h2>
-                <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
+                <BorderLine
+                  className="mt-5 mx-auto md:mx-0"
+                  color={COLOR_PALETTE.borderLine}
+                />
               </div>
               <h5 className=" mt-[30px]">
                 Earn $1,000 for a deal size between $50,000-$100,000
@@ -68,12 +71,13 @@ const ClosedSale = () => {
             </div>
           </div>
         </div>
+        <hr className="mt-20" />
       </section>
-      <section className="section-container mt-12 mb-36">
+      <section className="section-container mt-12 mb-36 text-center md:text-left">
         <SalesOrder />
         <CustomerInformation className="mt-9" />
         <button
-          className="mt-10 h-[60px] w-[170px] bg-main flex justify-center items-center button-text text-white"
+          className="mt-10 h-[60px] w-full md:w-[170px] bg-main flex justify-center items-center button-text text-white"
           onClick={() => navigate(`/${routeUrls.homePage.path}`)}
         >
           Submit
