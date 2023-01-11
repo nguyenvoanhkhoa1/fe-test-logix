@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Banner,
@@ -13,6 +13,7 @@ import routeUrls from "../../configs/route";
 
 const EnrolNow = () => {
   let navigate = useNavigate();
+  const [country, setCountry] = useState(null);
   return (
     <>
       <Banner imgUrl="images/banners/common.png">
@@ -65,6 +66,8 @@ const EnrolNow = () => {
               <Select
                 placeholder="Select Country"
                 options={COUNTRY_SELECT_OPTIONS}
+                value={country}
+                onChange={setCountry}
               />
             </div>
             <div className="mt-5">
