@@ -16,6 +16,7 @@ import {
   AccountMappingView,
   AppointmentSettingView,
   ClosedSaleView,
+  CompleteADemoView,
   EnrolNowView,
   HomepageView,
   LoginView,
@@ -86,6 +87,10 @@ const AppRoutes = () => {
               <Route
                 path={routeUrls.appointmentSetting.path}
                 element={<AppointmentSettingView />}
+              />
+              <Route
+                path={routeUrls.completeADemo.path}
+                element={<CompleteADemoView />}
               />
               <Route
                 path={routeUrls.closedSale.path}

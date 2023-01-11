@@ -6,16 +6,11 @@ import {
   CustomerInformation,
   Input,
   RewardCard,
-  Select,
 } from "../../components";
-import {
-  COLOR_PALETTE,
-  COUNTRY_SELECT_OPTIONS,
-  REWARD_CARDS,
-} from "../../configs/constants";
+import { COLOR_PALETTE, REWARD_CARDS } from "../../configs/constants";
 import routeUrls from "../../configs/route";
 
-const AppointmentSetting = () => {
+const CompleteADemo = () => {
   let navigate = useNavigate();
   return (
     <>
@@ -29,10 +24,10 @@ const AppointmentSetting = () => {
         <div className="grid grid-cols-12 gap-8">
           <div className=" col-span-4">
             <RewardCard
-              href={REWARD_CARDS.appointmentSetting.href}
-              title={REWARD_CARDS.appointmentSetting.title}
-              reward={REWARD_CARDS.appointmentSetting.reward}
-              color={REWARD_CARDS.appointmentSetting.color}
+              href={REWARD_CARDS.completeADemo.href}
+              title={REWARD_CARDS.completeADemo.title}
+              reward={REWARD_CARDS.completeADemo.reward}
+              color={REWARD_CARDS.completeADemo.color}
             />
             <div className="mt-2 text-subheader text-sm">
               <b>Note:</b>
@@ -44,7 +39,7 @@ const AppointmentSetting = () => {
           </div>
           <div className="col-span-8">
             <div>
-              <h2>SET & COMPLETE A JOINT MEETING WITH DATAMINR TEAM</h2>
+              <h2>Complete a Demo with the Dataminr Team</h2>
               <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
             </div>
             <div className=" mt-11">
@@ -105,4 +100,4 @@ const AppointmentSetting = () => {
   );
 };
 
-export default AppointmentSetting;
+export default CompleteADemo;
