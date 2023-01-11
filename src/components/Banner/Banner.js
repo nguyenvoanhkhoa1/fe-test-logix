@@ -1,10 +1,18 @@
 import React from "react";
 
-const Banner = ({ imgUrl, children, ...rest }) => {
+const Banner = ({
+  fullScreenMobile = false,
+  halfScreenMobile = false,
+  imgUrl,
+  children,
+  ...rest
+}) => {
   return (
     <div className="relative">
       <img
-        className="w-auto lg:w-full h-screen lg:h-auto object-cover object-center"
+        className={`${fullScreenMobile ? "h-screen" : ""} ${
+          halfScreenMobile ? "h-[50vh]" : ""
+        } w-auto lg:w-full lg:h-auto object-cover object-center`}
         src={imgUrl}
         alt=""
       />

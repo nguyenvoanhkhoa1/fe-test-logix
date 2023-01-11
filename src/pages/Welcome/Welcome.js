@@ -8,10 +8,12 @@ const Welcome = () => {
   let navigate = useNavigate();
   return (
     <>
-      <Banner imgUrl="images/banners/welcome.png">
+      <Banner imgUrl="images/banners/welcome.png" fullScreenMobile>
         <div className="flex flex-col text-white max-w-[509px]">
           <div>
-            <h1 className="max-w-[331px]">Do MORE Get MORE</h1>
+            <h1 className=" max-w-[200px] md:max-w-[250px] lg:max-w-[331px]">
+              Do MORE Get MORE
+            </h1>
             <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
           </div>
           <div className="mt-5 sm:mt-10 subtitle-text">

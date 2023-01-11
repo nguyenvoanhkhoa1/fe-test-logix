@@ -16,9 +16,11 @@ const EnrolNow = () => {
   const [country, setCountry] = useState(null);
   return (
     <>
-      <Banner imgUrl="images/banners/common.png">
+      <Banner imgUrl="images/banners/common.png" halfScreenMobile>
         <div className="text-white">
-          <h1 className="max-w-[331px]">Do MORE Get MORE</h1>
+          <h1 className="max-w-[200px] md:max-w-[250px] lg:max-w-[331px]">
+            Do MORE Get MORE
+          </h1>
           <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
         </div>
       </Banner>

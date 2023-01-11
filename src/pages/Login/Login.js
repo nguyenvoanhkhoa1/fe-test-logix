@@ -16,13 +16,15 @@ const Login = () => {
   };
   return (
     <>
-      <Banner imgUrl="images/banners/login.png">
+      <Banner imgUrl="images/banners/login.png" fullScreenMobile>
         <div className="flex flex-col text-white w-[430px]">
           <div>
-            <h1 className="max-w-[331px]">Do MORE Get MORE</h1>
+            <h1 className=" max-w-[200px] md:max-w-[250px] lg:max-w-[331px]">
+              Do MORE Get MORE
+            </h1>
             <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
           </div>
-          <div className="mt-16">
+          <div className="mt-8 md:mt-16">
             <label className="font-normal text-xl">Email</label>
             <Input
               className="mt-2 border-white bg-transparent"

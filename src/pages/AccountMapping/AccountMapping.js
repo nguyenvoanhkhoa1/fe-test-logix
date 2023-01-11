@@ -22,9 +22,9 @@ const AccountMapping = () => {
   };
   return (
     <>
-      <Banner imgUrl="images/banners/common.png">
+      <Banner imgUrl="images/banners/common.png" halfScreenMobile>
         <div className="text-white">
-          <h1 className="max-w-[331px]">Dataminr</h1>
+          <h1>Dataminr</h1>
           <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
         </div>
       </Banner>
