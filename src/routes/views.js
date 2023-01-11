@@ -16,4 +16,5 @@ export const HomepageView = lazy(() => import("../pages/Homepage"));
 export const SalesEnablementView = lazy(() =>
   import("../pages/SalesEnablement")
 );
+export const AccountMappingView = lazy(() => import("../pages/AccountMapping"));
 export const ClosedSaleView = lazy(() => import("../pages/ClosedSale"));

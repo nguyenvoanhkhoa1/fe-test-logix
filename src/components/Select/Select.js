@@ -6,7 +6,16 @@ const style = {
   "text-overflow": "",
 };
 
-const Select = ({ className, name, id, placeholder, options, ...rest }) => {
+const Select = ({
+  options,
+  value,
+  onChange,
+  className,
+  name,
+  id,
+  placeholder,
+  ...rest
+}) => {
   return (
     <div className="relative">
       <svg
@@ -20,10 +29,12 @@ const Select = ({ className, name, id, placeholder, options, ...rest }) => {
         <path d="M5 6L10 11L15 6L17 7L10 14L3 7L5 6Z" fill="#1C242A" />
       </svg>
       <select
-        className={`mt-[15px] border-[0.5px] border-solid border-subheader w-full h-[42px] p-[10px] rounded-[5px] input-text focus:outline-none ${className}`}
+        className={`mt-[15px] border-[0.5px] border-solid border-subheader w-full h-[42px] p-[10px] rounded-[5px] input-text focus:outline-indigo-700 ${className}`}
         style={style}
         name={name}
         id={id}
+        value={value}
+        onChange={onChange}
         {...rest}
       >
         {!options.length && (

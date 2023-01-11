@@ -13,6 +13,7 @@ import ScrollToTop from "../helpers/ScrollToTop";
 import Main from "../layouts/Main";
 import { useAppStore } from "../stores";
 import {
+  AccountMappingView,
   ClosedSaleView,
   EnrolNowView,
   HomepageView,
@@ -37,7 +38,6 @@ const ProtectedRoute = ({
 
 const AppRoutes = () => {
   const [appStore, updateAppStore] = useAppStore();
-  console.log(appStore.isAuthenticated);
   return (
     <Router>
       <Suspense fallback={<BrandLoading />}>
@@ -77,6 +77,10 @@ const AppRoutes = () => {
               <Route
                 path={routeUrls.salesEnablement.path}
                 element={<SalesEnablementView />}
+              />
+              <Route
+                path={routeUrls.accountMapping.path}
+                element={<AccountMappingView />}
               />
               <Route
                 path={routeUrls.closedSale.path}
