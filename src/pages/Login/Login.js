@@ -37,21 +37,21 @@ const Login = () => {
             />
           </div>
           <button
-            className="mt-[50px] w-[180px] h-[60px] bg-border_line flex justify-center items-center gap-1 button-text"
+            className="mt-[50px] max-w-[430px] w-full sm:w-[180px] h-[60px] bg-border_line flex justify-center items-center gap-1 button-text"
             onClick={handleLogin}
           >
             Log in
             <RightArrow color="white" />
           </button>
           <a
-            className="mt-12 button-text text-border_line flex gap-1 items-center"
+            className="mt-12 button-text text-border_line flex gap-1 items-center text-center justify-center sm:justify-start"
             href="."
           >
             Forgot your password?
             <RightArrow color={COLOR_PALETTE.borderLine} />
           </a>
           <a
-            className="mt-1 button-text text-border_line flex gap-1 items-center"
+            className="mt-4 sm:mt-1 button-text text-border_line flex gap-1 items-center justify-center sm:justify-start"
             href={`/${routeUrls.register.path}`}
           >
             Register

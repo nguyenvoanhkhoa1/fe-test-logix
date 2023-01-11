@@ -6,7 +6,7 @@ const Footer = () => {
   let navigate = useNavigate();
   return (
     <footer className="bg-main">
-      <div className="section-container h-[150px] flex items-center justify-between footer-text text-white">
+      <div className="section-container p-6 lg:h-[150px] flex flex-col lg:flex-row lg:items-center lg:justify-between text-center lg:text-left footer-text text-white">
         <div>
           <div>
             © 2022 - Dataminr and/or its affiliates. All rights reserved.
@@ -30,7 +30,7 @@ const Footer = () => {
             </span>
           </div>
           <img
-            className="mt-3 h-[20px] w-auto float-right"
+            className="mt-3 h-[20px] mx-auto w-auto lg:float-right"
             src="images/dataminr-logo.png"
             alt=""
           />
