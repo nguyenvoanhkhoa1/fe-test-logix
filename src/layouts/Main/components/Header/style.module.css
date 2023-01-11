@@ -1,0 +1,50 @@
+.menuToggle {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 26px;
+
+  background: transparent;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
+
+  color: white;
+  font-size: 0;
+
+  transition: all 0.25s ease-in-out;
+}
+.menuToggle:before,
+.menuToggle:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  background: currentColor;
+
+  transform: translate(-50%, -50%);
+  transition: transform 0.25s ease-in-out;
+}
+
+.isActive {
+  border-color: transparent;
+}
+
+.isActive:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.isActive:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.link {
+  @apply py-3 px-5 lg:p-0 w-full lg:w-auto font-semibold text-3xl lg:text-base text-center;
+}
