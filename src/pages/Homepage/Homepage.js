@@ -14,7 +14,7 @@ const Homepage = () => {
           <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
         </div>
       </Banner>
-      <section className="section-container mt-14 mb-60">
+      <section className="section-container mt-14 mb-24 md:mb-60">
         <div className="flex flex-col items-center">
           <div className="max-w-5xl text-center text-subheader">
             <h3>EARN REWARDS WHEN YOU PARTNER WITH DATAMINR</h3>
@@ -29,7 +29,7 @@ const Homepage = () => {
         </div>
         <div className="mt-9 grid grid-cols-12 gap-[30px]">
           {Object.keys(REWARD_CARDS).map((item, index) => (
-            <div className=" col-span-4">
+            <div className=" col-span-12 sm:col-span-6 lg:col-span-4">
               <RewardCard
                 href={REWARD_CARDS[item].href}
                 title={REWARD_CARDS[item].title}

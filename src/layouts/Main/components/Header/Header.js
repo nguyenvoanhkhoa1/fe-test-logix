@@ -20,7 +20,7 @@ const Header = () => {
             alt=""
           />
         </Link>
-        <nav className="body-link flex gap-5 text-white">
+        <nav className="hidden body-link lg:flex gap-5 text-white">
           {!appStore.isAuthenticated ? (
             <>
               <Link to={routeUrls.register.path}>
