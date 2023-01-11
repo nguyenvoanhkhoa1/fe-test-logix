@@ -14,6 +14,7 @@ import Main from "../layouts/Main";
 import { useAppStore } from "../stores";
 import {
   AccountMappingView,
+  AppointmentSettingView,
   ClosedSaleView,
   EnrolNowView,
   HomepageView,
@@ -81,6 +82,10 @@ const AppRoutes = () => {
               <Route
                 path={routeUrls.accountMapping.path}
                 element={<AccountMappingView />}
+              />
+              <Route
+                path={routeUrls.appointmentSetting.path}
+                element={<AppointmentSettingView />}
               />
               <Route
                 path={routeUrls.closedSale.path}

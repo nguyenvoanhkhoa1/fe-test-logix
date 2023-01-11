@@ -8,7 +8,7 @@ import {
   RightArrow,
   Select,
 } from "../../components";
-import { COLOR_PALETTE } from "../../configs/constants";
+import { COLOR_PALETTE, COUNTRY_SELECT_OPTIONS } from "../../configs/constants";
 import routeUrls from "../../configs/route";
 
 const EnrolNow = () => {
@@ -64,10 +64,7 @@ const EnrolNow = () => {
               <Input placeholder="Mobile Phone" />
               <Select
                 placeholder="Select Country"
-                options={[
-                  { value: "US", label: "United States" },
-                  { value: "CA", label: "Canada" },
-                ]}
+                options={COUNTRY_SELECT_OPTIONS}
               />
             </div>
             <div className="mt-5">

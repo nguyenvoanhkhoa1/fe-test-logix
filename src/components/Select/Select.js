@@ -37,13 +37,13 @@ const Select = ({
         onChange={onChange}
         {...rest}
       >
-        {!options.length && (
+        {!options?.length && (
           <p className="py-2 pl-3 pr-9 text-gray-400">Không có dữ liệu</p>
         )}
         <option className="hidden" value="" disabled selected>
           {placeholder}
         </option>
-        {options.map((item, index) => (
+        {options?.map((item, index) => (
           <option value={item?.value}>{item?.label}</option>
         ))}
       </select>

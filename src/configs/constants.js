@@ -60,3 +60,7 @@ export const TARGETED_ACCOUNTS_OPTIONS = [
   { value: 4, label: "4" },
   { value: 5, label: "5" },
 ];
+export const COUNTRY_SELECT_OPTIONS = [
+  { value: "US", label: "United States" },
+  { value: "CA", label: "Canada" },
+];

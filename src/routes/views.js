@@ -17,4 +17,7 @@ export const SalesEnablementView = lazy(() =>
   import("../pages/SalesEnablement")
 );
 export const AccountMappingView = lazy(() => import("../pages/AccountMapping"));
+export const AppointmentSettingView = lazy(() =>
+  import("../pages/AppointmentSetting")
+);
 export const ClosedSaleView = lazy(() => import("../pages/ClosedSale"));
