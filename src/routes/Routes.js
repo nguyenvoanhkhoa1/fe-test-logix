@@ -5,6 +5,7 @@ import {
   Route,
   Link,
   Navigate,
+  Outlet,
 } from "react-router-dom";
 import { BrandLoading } from "../components";
 import routeUrls from "../configs/route";
@@ -12,10 +13,12 @@ import ScrollToTop from "../helpers/ScrollToTop";
 import Main from "../layouts/Main";
 import { useAppStore } from "../stores";
 import {
+  ClosedSaleView,
   EnrolNowView,
   HomepageView,
   LoginView,
   PrivacyPolicyView,
+  SalesEnablementView,
   TermsAndConditionsView,
   WelcomeView,
 } from "./views";
@@ -29,15 +32,17 @@ const ProtectedRoute = ({
     return <Navigate to={redirectPath} replace />;
   }
 
-  return children;
+  return <Outlet />;
 };
 
 const AppRoutes = () => {
   const [appStore, updateAppStore] = useAppStore();
+  console.log(appStore.isAuthenticated);
   return (
     <Router>
       <Suspense fallback={<BrandLoading />}>
         <Main>
+          {}
           <ScrollToTop />
           <Routes>
             <Route
@@ -68,6 +73,14 @@ const AppRoutes = () => {
               <Route
                 path={routeUrls.homePage.path}
                 element={<HomepageView />}
+              />
+              <Route
+                path={routeUrls.salesEnablement.path}
+                element={<SalesEnablementView />}
+              />
+              <Route
+                path={routeUrls.closedSale.path}
+                element={<ClosedSaleView />}
               />
             </Route>
 

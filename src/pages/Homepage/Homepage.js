@@ -1,6 +1,7 @@
 import React from "react";
 import { Banner, BorderLine, RewardCard } from "../../components";
-import { COLOR_PALETTE } from "../../configs/constants";
+import { COLOR_PALETTE, REWARD_CARDS } from "../../configs/constants";
+import routeUrls from "../../configs/route";
 
 const Homepage = () => {
   return (
@@ -25,43 +26,16 @@ const Homepage = () => {
           </span>
         </div>
         <div className="mt-9 grid grid-cols-12 gap-[30px]">
-          <div className=" col-span-4">
-            <RewardCard
-              title="Sales Enablement"
-              reward="$25"
-              color={COLOR_PALETTE.logo}
-            />
-          </div>
-          <div className=" col-span-4">
-            <RewardCard title="Account Mapping" reward="$100" color="#895737" />
-          </div>
-          <div className=" col-span-4">
-            <RewardCard
-              title="APPOINTMENT SETTING"
-              reward="$250"
-              color="#01A982"
-            />
-          </div>
-          <div className=" col-span-4">
-            <RewardCard title="Complete a Demo" reward="$250" color="#4A4E69" />
-          </div>
-          <div className=" col-span-4">
-            <RewardCard title="Register a Deal" reward="$500" color="#00739D" />
-          </div>
-          <div className=" col-span-4">
-            <RewardCard
-              title="Close a Deal"
-              reward="Up to $2000"
-              color="#EE9B00"
-            />
-          </div>
-          <div className=" col-span-4">
-            <RewardCard
-              title="obtain a new logo"
-              reward="Up to $5000"
-              color={COLOR_PALETTE.main}
-            />
-          </div>
+          {Object.keys(REWARD_CARDS).map((item, index) => (
+            <div className=" col-span-4">
+              <RewardCard
+                href={REWARD_CARDS[item].href}
+                title={REWARD_CARDS[item].title}
+                reward={REWARD_CARDS[item].reward}
+                color={REWARD_CARDS[item].color}
+              />
+            </div>
+          ))}
         </div>
       </section>
     </>

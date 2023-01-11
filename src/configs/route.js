@@ -35,6 +35,34 @@ const routeUrls = {
     path: "",
     title: "Homepage",
   },
+  salesEnablement: {
+    path: "sales-enablement",
+    title: "Sales Enablement",
+  },
+  accountMapping: {
+    path: "account-mapping",
+    title: "Account Mapping",
+  },
+  appointmentSetting: {
+    path: "appointment-setting",
+    title: "Appointment Setting",
+  },
+  completeADemo: {
+    path: "complete-a-demo",
+    title: "Complete A Demo",
+  },
+  dealRegistration: {
+    path: "deal-registration",
+    title: "Deal Registration",
+  },
+  closeADeal: {
+    title: "close-a-deal",
+    path: "Close A Deal",
+  },
+  closedSale: {
+    path: "closed-sale",
+    title: "Closed Sale",
+  },
 };
 
 export default routeUrls;

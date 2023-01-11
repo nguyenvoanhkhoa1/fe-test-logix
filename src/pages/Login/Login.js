@@ -12,7 +12,6 @@ const Login = () => {
     updateAppStore((draft) => {
       draft.isAuthenticated = true;
     });
-    console.log(appStore);
     navigate(`/${routeUrls.homePage.path}`);
   };
   return (

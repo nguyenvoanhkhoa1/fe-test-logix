@@ -12,3 +12,8 @@ export const EnrolNowView = lazy(() => import("../pages/EnrolNow"));
 export const LoginView = lazy(() => import("../pages/Login"));
 
 export const HomepageView = lazy(() => import("../pages/Homepage"));
+
+export const SalesEnablementView = lazy(() =>
+  import("../pages/SalesEnablement")
+);
+export const ClosedSaleView = lazy(() => import("../pages/ClosedSale"));
