@@ -7,3 +7,4 @@ export { default as QuestionMark } from "./QuestionMark";
 export { default as RightArrow } from "./RightArrow";
 export { default as RewardCard } from "./RewardCard";
 export { default as CustomerInformation } from "./CustomerInformation";
+export { default as SalesOrder } from "./SalesOrder";

@@ -56,8 +56,8 @@ const routeUrls = {
     title: "Deal Registration",
   },
   closeADeal: {
-    title: "close-a-deal",
-    path: "Close A Deal",
+    path: "close-a-deal",
+    title: "Close A Deal",
   },
   closedSale: {
     path: "closed-sale",

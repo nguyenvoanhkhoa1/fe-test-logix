@@ -21,7 +21,7 @@ h4 {
   @apply font-semibold text-[33px] leading-[38px] uppercase;
 }
 h5 {
-  @apply font-semibold text-[25px] leading-[30px];
+  @apply font-semibold text-[25px] leading-[30px] uppercase;
 }
 .body-main {
   @apply font-light text-[22px];

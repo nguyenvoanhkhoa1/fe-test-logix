@@ -15,6 +15,7 @@ import { useAppStore } from "../stores";
 import {
   AccountMappingView,
   AppointmentSettingView,
+  CloseADealView,
   ClosedSaleView,
   CompleteADemoView,
   DealRegistrationView,
@@ -96,6 +97,10 @@ const AppRoutes = () => {
               <Route
                 path={routeUrls.dealRegistration.path}
                 element={<DealRegistrationView />}
+              />
+              <Route
+                path={routeUrls.closeADeal.path}
+                element={<CloseADealView />}
               />
               <Route
                 path={routeUrls.closedSale.path}

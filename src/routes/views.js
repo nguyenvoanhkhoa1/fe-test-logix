@@ -24,4 +24,5 @@ export const CompleteADemoView = lazy(() => import("../pages/CompleteADemo"));
 export const DealRegistrationView = lazy(() =>
   import("../pages/DealRegistration")
 );
+export const CloseADealView = lazy(() => import("../pages/CloseADeal"));
 export const ClosedSaleView = lazy(() => import("../pages/ClosedSale"));
