@@ -10,7 +10,7 @@ const SalesEnablement = () => {
     <>
       <Banner imgUrl="images/banners/common.png">
         <div className="text-white">
-          <h1 className="max-w-[331px]">Do MORE Get MORE</h1>
+          <h1 className="max-w-[331px]">Dataminr</h1>
           <BorderLine className="mt-5" color={COLOR_PALETTE.borderLine} />
         </div>
       </Banner>

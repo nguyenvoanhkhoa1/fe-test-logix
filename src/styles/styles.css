@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  @apply font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] leading-tight;
+  @apply font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[65px] leading-tight uppercase;
 }
 h2 {
   @apply font-bold text-[44px] leading-[50px] uppercase;
