@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {
   Banner,
   BorderLine,
+  CustomDateTimePicker,
   CustomerInformation,
   Input,
   RewardCard,
@@ -95,7 +96,7 @@ const AppointmentSetting = () => {
             <Input placeholder="First Name" type="text" />
             <Input placeholder="Last Name" type="text" />
             <Input placeholder="Email" type="text" />
-            <Input placeholder="Date of Demo" type="date" />
+            <CustomDateTimePicker placeholder="Date of Demo" value={null} />
           </div>
         </div>
         <button

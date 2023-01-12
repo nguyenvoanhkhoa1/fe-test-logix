@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {
   Banner,
   BorderLine,
+  CustomDateTimePicker,
   Input,
   RewardCard,
   Select,
@@ -17,6 +18,7 @@ import routeUrls from "../../configs/route";
 const AccountMapping = () => {
   let navigate = useNavigate();
   const [numberOfAccounts, SetNumberOfAccount] = useState(null);
+  const [dateTime, setDateTime] = useState(null);
   const handleChangeNumberOfAccounts = (event) => {
     SetNumberOfAccount(parseInt(event.target.value));
   };
@@ -119,7 +121,11 @@ const AccountMapping = () => {
                 { value: "C2", label: "Contact 2" },
               ]}
             />
-            <Input placeholder="Date of Mapping Meeting" type="date" />
+            <CustomDateTimePicker
+              placeholder="Date of Demo"
+              value={dateTime}
+              onChange={(e) => setDateTime(e)}
+            />
           </div>
           <button
             className="mt-14 h-[60px] w-full md:w-[170px] bg-main flex justify-center items-center button-text text-white button-hover color-line"
