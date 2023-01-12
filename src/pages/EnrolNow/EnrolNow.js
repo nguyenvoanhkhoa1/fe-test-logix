@@ -118,7 +118,10 @@ const EnrolNow = () => {
               <Input placeholder="Personal Zip" />
               <div className="flex gap-[14px]">
                 <Input placeholder="Date Of Birth" />
-                <QuestionMark className="mt-[15px]" title="Date of Birth" />
+                <QuestionMark
+                  className="mt-[15px]"
+                  title="Your Date of Birth is required to participate in the Sell More Earn More program. This will be used as a security measure on your virtual SPIF card. If you do not provide your Date of Birth, you will not be able to participate in the program. Please see our Privacy Policy if you have any questions about the safety of your data."
+                />
               </div>
             </div>
             <div className="mt-5">

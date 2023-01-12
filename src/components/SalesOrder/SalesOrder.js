@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { DEAL_SIZE_SELECT_OPTIONS } from "../../configs/constants";
 import Input from "../Input";
 import Select from "../Select";
 
@@ -10,7 +11,11 @@ const SalesOrder = ({ className, ...rest }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
         <Input placeholder="Enter Sales Order Number" type="text" />
         <div className=" col-span-1">
-          <Select placeholder="Deal Size" type="text" />
+          <Select
+            placeholder="Deal Size"
+            type="text"
+            options={DEAL_SIZE_SELECT_OPTIONS}
+          />
           <div className="mt-[15px] flex items-center">
             <input
               id="seInvolved"

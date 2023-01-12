@@ -64,3 +64,7 @@ export const COUNTRY_SELECT_OPTIONS = [
   { value: "US", label: "United States" },
   { value: "CA", label: "Canada" },
 ];
+export const DEAL_SIZE_SELECT_OPTIONS = [
+  { value: "1", label: "$50k - $100K" },
+  { value: "2", label: "$100k+" },
+];
