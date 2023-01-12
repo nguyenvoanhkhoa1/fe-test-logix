@@ -40,7 +40,7 @@ const Select = ({
         <path d="M5 6L10 11L15 6L17 7L10 14L3 7L5 6Z" fill="#1C242A" />
       </svg>
       <button
-        className={`mt-[15px] border-[0.5px] border-solid border-subheader w-full h-[42px] p-[10px] rounded-[5px] ${
+        className={`mt-[15px] border-[0.5px] border-solid border-subheader w-full h-[42px] p-[10px] rounded-[5px] overflow-hidden ${
           open ? "border-indigo-700 border-2" : ""
         } input-text text-left box-border ${className}`}
         name={name}
