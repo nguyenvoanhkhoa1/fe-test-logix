@@ -39,25 +39,25 @@ const Login = () => {
             />
           </div>
           <button
-            className="mt-[50px] max-w-[430px] w-full sm:w-[180px] h-[60px] bg-border_line flex justify-center items-center gap-1 button-text"
+            className="mt-[50px] max-w-[430px] w-full sm:w-[180px] h-[60px] bg-border_line flex justify-center items-center gap-1 button-text button-hover color-main"
             onClick={handleLogin}
           >
             Log in
             <RightArrow color="white" />
           </button>
           <a
-            className="mt-12 button-text text-border_line flex gap-1 items-center text-center justify-center sm:justify-start"
+            className="mt-12 button-text text-border_line hover:text-white transition-all duration-300 flex gap-1 items-center text-center justify-center sm:justify-start group"
             href="."
           >
             Forgot your password?
-            <RightArrow color={COLOR_PALETTE.borderLine} />
+            <RightArrow className="fill-border_line group-hover:fill-white transition-all duration-300" />
           </a>
           <a
-            className="mt-4 sm:mt-1 button-text text-border_line flex gap-1 items-center justify-center sm:justify-start"
+            className="mt-4 sm:mt-1 button-text text-border_line hover:text-white transition-all duration-300 flex gap-1 items-center justify-center sm:justify-start group"
             href={`/${routeUrls.register.path}`}
           >
             Register
-            <RightArrow color={COLOR_PALETTE.borderLine} />
+            <RightArrow className="fill-border_line group-hover:fill-white transition-all duration-300" />
           </a>
         </div>
       </Banner>

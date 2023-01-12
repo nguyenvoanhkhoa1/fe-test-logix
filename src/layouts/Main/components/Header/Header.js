@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <header
       className={`${
-        onTop ? " bg-transparent" : "bg-main"
+        onTop ? " bg-transparent hover:bg-main" : "bg-main"
       } fixed w-full z-30 shadow-2xl transition-all duration-500 ease-in-out`}
     >
       <div
@@ -60,7 +60,7 @@ const Header = () => {
             openToggleMenu
               ? "top-0 opacity-100"
               : "-top-[100vh] lg:top-0 opacity-0 lg:opacity-100"
-          } fixed left-0 w-screen h-screen lg:w-auto lg:h-auto lg:relative p-12 lg:p-0 flex-col items-center body-link flex lg:flex-row gap-5 text-white bg-[#000000e6] lg:bg-transparent transition-all duration-500`}
+          } fixed left-0 w-screen h-screen lg:w-auto lg:h-full lg:relative p-12 lg:p-0 flex-col items-center body-link flex lg:flex-row text-white bg-[#000000e6] lg:bg-transparent transition-all duration-500`}
         >
           {!appStore.isAuthenticated ? (
             <>

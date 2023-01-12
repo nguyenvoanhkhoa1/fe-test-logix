@@ -46,5 +46,5 @@
 }
 
 .link {
-  @apply py-3 px-5 lg:p-0 w-full lg:w-auto font-semibold text-3xl lg:text-base text-center;
+  @apply py-3 px-5 lg:py-0 lg:px-3 w-full lg:w-auto lg:h-full lg:flex items-center font-semibold text-3xl lg:text-base text-center hover:bg-border_line transition-all duration-300;
 }

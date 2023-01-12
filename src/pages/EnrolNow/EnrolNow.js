@@ -188,17 +188,17 @@ const EnrolNow = () => {
               </div>
             </div>
             <button
-              className="mt-9 h-[60px] w-full bg-main flex justify-center items-center button-text text-white"
+              className="mt-9 h-[60px] w-full bg-main flex justify-center items-center button-text text-white button-hover color-line"
               onClick={() => navigate(`/${routeUrls.welcome.path}`)}
             >
               Register
             </button>
             <button
-              className="mt-8 w-full button-text text-button flex justify-center items-center gap-1"
+              className="mt-8 w-full button-text text-button hover:text-border_line flex justify-center items-center gap-1 group transition-all duration-300"
               onClick={() => navigate(`/${routeUrls.login.path}`)}
             >
               Back to Login
-              <RightArrow color={COLOR_PALETTE.button} />
+              <RightArrow className="fill-button group-hover:fill-border_line transition-all duration-300" />
             </button>
           </div>
         </div>

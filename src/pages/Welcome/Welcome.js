@@ -29,14 +29,14 @@ const Welcome = () => {
           </div>
           <div className="mt-5 sm:mt-[50px] flex flex-col sm:flex-row gap-4 sm:gap-1">
             <button
-              className="w-[200px] h-[60px] flex justify-center items-center gap-1 border-2 border-solid border-border_line button-text text-white"
+              className="w-[200px] h-[60px] flex justify-center items-center gap-1 border-2 border-solid border-border_line button-text text-white button-hover color-line"
               onClick={() => navigate(`/${routeUrls.enrolNow.path}`)}
             >
               Enroll Now
               <RightArrow color="white" />
             </button>
             <button
-              className="w-[200px] sm:w-[180px] h-[60px] flex justify-center items-center gap-1 border-2 border-solid border-border_line button-text text-white"
+              className="w-[200px] sm:w-[180px] h-[60px] flex justify-center items-center gap-1 border-2 border-solid border-border_line button-text text-white button-hover color-line"
               onClick={() => navigate(`/${routeUrls.login.path}`)}
             >
               Login

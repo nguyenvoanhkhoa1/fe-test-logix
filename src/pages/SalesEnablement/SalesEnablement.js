@@ -69,7 +69,7 @@ const SalesEnablement = () => {
         <h4>Completion Code</h4>
         <Input className="max-w-xl" placeholder="Enter Code" type="text" />
         <button
-          className="mt-10 h-[60px] w-full md:w-[170px] bg-main flex justify-center items-center button-text text-white"
+          className="mt-10 h-[60px] w-full md:w-[170px] bg-main flex justify-center items-center button-text text-white button-hover color-line"
           onClick={() => navigate(`/${routeUrls.homePage.path}`)}
         >
           Submit
